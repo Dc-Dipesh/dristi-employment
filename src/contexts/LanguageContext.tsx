@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 import { Language, translations, Translations } from "@/translations";
 
 interface LanguageContextValue {
@@ -12,15 +18,15 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("ne");
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window === "undefined") return "en";
+    const stored = localStorage.getItem("dristi-lang");
+    return stored === "en" || stored === "ne" ? stored : "en";
+  });
 
   useEffect(() => {
-    const stored = localStorage.getItem("dristi-lang") as Language | null;
-    if (stored === "en" || stored === "ne") {
-      setLanguageState(stored);
-      document.documentElement.lang = stored;
-    }
-  }, []);
+    document.documentElement.lang = language;
+  }, [language]);
 
   function setLanguage(lang: Language) {
     setLanguageState(lang);
@@ -29,7 +35,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
+    <LanguageContext.Provider
+      value={{
+        language,
+        setLanguage,
+        t: translations[language] as Translations,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
