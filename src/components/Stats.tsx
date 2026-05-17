@@ -2,17 +2,24 @@
 
 import { Award, Globe, TrendingUp, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import statsData from "@/data/stats.json";
 
 const icons = [TrendingUp, Users, Globe, Award];
 
 export default function Stats() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const stats = statsData[language];
+  const s = t.sections.stats;
 
   return (
     <section id="about" className="bg-navy py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <p className="text-gold text-sm font-semibold uppercase tracking-wider mb-1">{s.badge}</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">{s.heading}</h2>
+        </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {t.stats.map(({ value, label, desc }, i) => {
+          {stats.map(({ value, label, desc }, i) => {
             const Icon = icons[i];
             return (
               <div key={label} className="flex flex-col items-center text-center group">

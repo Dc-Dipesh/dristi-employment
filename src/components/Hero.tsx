@@ -11,23 +11,15 @@ export default function Hero() {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: "url('/hero-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-linear-to-br from-navy-dark via-navy to-navy-light" />
-
-      {/* Decorative circles */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-navy-light/30 rounded-full blur-3xl" />
-
-      {/* Dot pattern */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)",
-          backgroundSize: "30px 30px",
-        }}
-      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/80" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="max-w-3xl mx-auto text-center">
@@ -39,14 +31,15 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-            {h.headline1}{" "}
-            <span className="text-gold">{h.headline2}</span>
+            {h.headline1} <span className="text-gold">{h.headline2}</span>
           </h1>
 
           {/* Sub-headline */}
           <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
             {h.sub1}{" "}
-            <span className="text-gold-light font-medium">{h.subHighlight}</span>{" "}
+            <span className="text-gold-light font-medium">
+              {h.subHighlight}
+            </span>{" "}
             {h.sub2}
           </p>
 

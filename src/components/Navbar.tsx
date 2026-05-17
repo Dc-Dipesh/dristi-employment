@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Globe, Menu, X, ChevronDown, Check } from "lucide-react";
+import { Menu, X, ChevronDown, Check } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Language } from "@/translations";
 
@@ -77,8 +78,12 @@ function LanguageDropdown() {
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -87,11 +92,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t.nav.home, href: "#home" },
-    { label: t.nav.about, href: "#about" },
-    { label: t.nav.destinations, href: "#destinations" },
-    { label: t.nav.process, href: "#process" },
-    { label: t.nav.contact, href: "#contact" },
+    { label: t.nav.home,         href: "/" },
+    { label: t.nav.destinations, href: "/destinations" },
+    { label: t.nav.process,      href: "/process" },
+    { label: t.nav.team,         href: "/team" },
+    { label: t.nav.contact,      href: "/contact" },
   ];
 
   return (
@@ -104,9 +109,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 shrink-0">
-            <div className="bg-navy rounded-lg p-1.5">
-              <Globe className="w-5 h-5 text-gold" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Dristi International Employment"
+              className="h-11 w-auto object-contain"
+            />
             <span className="font-bold text-navy text-lg leading-tight">
               DRISTI
               <span className="block text-[10px] font-normal text-gray-500 -mt-1 tracking-wider uppercase">
@@ -121,7 +128,11 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-navy transition-colors"
+                className={`text-sm font-medium transition-colors relative ${
+                  isActive(link.href)
+                    ? "text-navy after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-0.5 after:bg-gold after:rounded-full"
+                    : "text-gray-600 hover:text-navy"
+                }`}
               >
                 {link.label}
               </a>
@@ -130,7 +141,7 @@ export default function Navbar() {
             <LanguageDropdown />
 
             <a
-              href="#contact"
+              href="/contact"
               className="bg-gold hover:bg-gold-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors shadow-sm"
             >
               {t.nav.applyNow}
@@ -158,14 +169,18 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-navy hover:bg-blue-50 rounded-md transition-colors"
+                className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  isActive(link.href)
+                    ? "text-navy bg-blue-50 border-l-2 border-gold"
+                    : "text-gray-700 hover:text-navy hover:bg-blue-50"
+                }`}
               >
                 {link.label}
               </a>
             ))}
             <div className="px-3 pt-2">
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setIsOpen(false)}
                 className="block text-center bg-gold hover:bg-gold-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
               >

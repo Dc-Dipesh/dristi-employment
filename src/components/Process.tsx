@@ -2,12 +2,14 @@
 
 import { FileText, Users, CreditCard, Plane, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import processData from "@/data/process.json";
 
 const icons = [FileText, Users, CreditCard, Plane];
 
 export default function Process() {
-  const { t } = useLanguage();
-  const p = t.process;
+  const { t, language } = useLanguage();
+  const p = t.sections.process;
+  const { steps } = processData[language];
 
   return (
     <section id="process" className="py-20 bg-white">
@@ -24,23 +26,19 @@ export default function Process() {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connector line — desktop */}
           <div className="hidden lg:block absolute top-12 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5 bg-linear-to-r from-blue-200 via-amber-200 to-green-200 z-0" />
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-4">
-            {p.steps.map(({ title, desc, details, color, bg, border }, index) => {
+            {steps.map(({ title, desc, details, color, bg, border }, index) => {
               const Icon = icons[index];
               return (
                 <div key={title} className="relative flex flex-col">
-                  {/* Mobile connector */}
-                  {index < p.steps.length - 1 && (
+                  {index < steps.length - 1 && (
                     <div className="lg:hidden flex justify-center my-2">
                       <ArrowRight className="w-5 h-5 text-gray-300 rotate-90" />
                     </div>
                   )}
-
                   <div className={`bg-white rounded-2xl border ${border} p-6 shadow-sm hover:shadow-md transition-shadow relative z-10 flex-1`}>
-                    {/* Icon + step number */}
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`${bg} ${border} border rounded-xl p-2.5`}>
                         <Icon className={`w-5 h-5 ${color}`} />
@@ -49,10 +47,8 @@ export default function Process() {
                         {index + 1}
                       </div>
                     </div>
-
                     <h3 className="text-lg font-bold text-navy mb-2">{title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed mb-4">{desc}</p>
-
                     <ul className="space-y-1.5">
                       {details.map((d) => (
                         <li key={d} className="flex items-center gap-2 text-xs text-gray-600">
@@ -68,10 +64,9 @@ export default function Process() {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-navy hover:bg-navy-dark text-white font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
           >
             {p.cta}

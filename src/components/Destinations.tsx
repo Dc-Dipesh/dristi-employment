@@ -2,10 +2,12 @@
 
 import { Briefcase, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import destinationsData from "@/data/destinations.json";
 
 export default function Destinations() {
-  const { t } = useLanguage();
-  const d = t.destinations;
+  const { t, language } = useLanguage();
+  const d = t.sections.destinations;
+  const { regions } = destinationsData[language];
 
   return (
     <section id="destinations" className="py-20 bg-gray-50">
@@ -22,27 +24,27 @@ export default function Destinations() {
 
         {/* Regions grid */}
         <div className="grid lg:grid-cols-3 gap-8">
-          {d.regions.map(({ region, emoji, color, countries }) => (
+          {regions.map(({ name, emoji, color, countries }) => (
             <div
-              key={region}
+              key={name}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
             >
               {/* Region header */}
               <div className={`bg-linear-to-r ${color} px-6 py-4`}>
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">{emoji}</span>
-                  <h3 className="text-xl font-bold text-white">{region}</h3>
+                  <h3 className="text-xl font-bold text-white">{name}</h3>
                 </div>
               </div>
 
               {/* Countries */}
               <div className="divide-y divide-gray-50">
-                {countries.map(({ name, flag, jobs }) => (
-                  <div key={name} className="px-6 py-4 hover:bg-gray-50 transition-colors">
+                {countries.map(({ name: countryName, flag, jobs }) => (
+                  <div key={countryName} className="px-6 py-4 hover:bg-gray-50 transition-colors">
                     <div className="flex items-start gap-3">
                       <span className="text-2xl mt-0.5">{flag}</span>
                       <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-navy text-sm">{name}</div>
+                        <div className="font-semibold text-navy text-sm">{countryName}</div>
                         <div className="flex flex-wrap gap-1 mt-1.5">
                           {jobs.map((job) => (
                             <span
@@ -62,10 +64,10 @@ export default function Destinations() {
 
               <div className="px-6 py-4 bg-gray-50">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="block text-center text-sm font-semibold text-gold hover:text-gold-dark transition-colors"
                 >
-                  {d.applyFor(region)}
+                  {d.applyFor(name)}
                 </a>
               </div>
             </div>

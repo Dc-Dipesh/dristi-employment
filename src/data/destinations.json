@@ -1,0 +1,82 @@
+{
+  "en": {
+    "regions": [
+      {
+        "id": "gulf",
+        "name": "Gulf Region",
+        "emoji": "🌅",
+        "color": "from-amber-500 to-orange-600",
+        "countries": [
+          { "name": "United Arab Emirates", "flag": "🇦🇪", "jobs": ["Construction", "Hospitality", "Healthcare"] },
+          { "name": "Qatar",                "flag": "🇶🇦", "jobs": ["Engineering", "Security", "Domestic"] },
+          { "name": "Saudi Arabia",         "flag": "🇸🇦", "jobs": ["Oil & Gas", "Construction", "Retail"] },
+          { "name": "Kuwait",               "flag": "🇰🇼", "jobs": ["Domestic", "Security", "IT"] }
+        ]
+      },
+      {
+        "id": "europe",
+        "name": "Europe",
+        "emoji": "🏰",
+        "color": "from-blue-500 to-indigo-600",
+        "countries": [
+          { "name": "Romania",  "flag": "🇷🇴", "jobs": ["Manufacturing", "Agriculture", "Construction"] },
+          { "name": "Poland",   "flag": "🇵🇱", "jobs": ["Factory Work", "Logistics", "Hospitality"] },
+          { "name": "Croatia",  "flag": "🇭🇷", "jobs": ["Tourism", "Construction", "Agriculture"] },
+          { "name": "Portugal", "flag": "🇵🇹", "jobs": ["Tourism", "Agriculture", "Logistics"] }
+        ]
+      },
+      {
+        "id": "east-asia",
+        "name": "East Asia",
+        "emoji": "🌸",
+        "color": "from-rose-500 to-pink-600",
+        "countries": [
+          { "name": "Japan",       "flag": "🇯🇵", "jobs": ["Skilled Worker", "Agriculture", "Care Work"] },
+          { "name": "Malaysia",    "flag": "🇲🇾", "jobs": ["Manufacturing", "Construction", "Plantation"] },
+          { "name": "South Korea", "flag": "🇰🇷", "jobs": ["EPS Program", "Manufacturing", "Agriculture"] },
+          { "name": "Hong Kong",   "flag": "🇭🇰", "jobs": ["Domestic", "Hospitality", "Retail"] }
+        ]
+      }
+    ]
+  },
+  "ne": {
+    "regions": [
+      {
+        "id": "gulf",
+        "name": "खाडी क्षेत्र",
+        "emoji": "🌅",
+        "color": "from-amber-500 to-orange-600",
+        "countries": [
+          { "name": "संयुक्त अरब इमिरेट्स", "flag": "🇦🇪", "jobs": ["निर्माण", "आतिथ्य", "स्वास्थ्य सेवा"] },
+          { "name": "कतार",                  "flag": "🇶🇦", "jobs": ["इन्जिनियरिङ", "सुरक्षा", "घरेलु सेवा"] },
+          { "name": "साउदी अरेबिया",         "flag": "🇸🇦", "jobs": ["तेल र ग्यास", "निर्माण", "खुद्रा"] },
+          { "name": "कुवेत",                 "flag": "🇰🇼", "jobs": ["घरेलु सेवा", "सुरक्षा", "सूचना प्रविधि"] }
+        ]
+      },
+      {
+        "id": "europe",
+        "name": "युरोप",
+        "emoji": "🏰",
+        "color": "from-blue-500 to-indigo-600",
+        "countries": [
+          { "name": "रोमानिया",  "flag": "🇷🇴", "jobs": ["उत्पादन", "कृषि", "निर्माण"] },
+          { "name": "पोल्याण्ड", "flag": "🇵🇱", "jobs": ["कारखाना", "ढुवानी", "आतिथ्य"] },
+          { "name": "क्रोएशिया", "flag": "🇭🇷", "jobs": ["पर्यटन", "निर्माण", "कृषि"] },
+          { "name": "पोर्चुगल", "flag": "🇵🇹", "jobs": ["पर्यटन", "कृषि", "ढुवानी"] }
+        ]
+      },
+      {
+        "id": "east-asia",
+        "name": "पूर्वी एशिया",
+        "emoji": "🌸",
+        "color": "from-rose-500 to-pink-600",
+        "countries": [
+          { "name": "जापान",         "flag": "🇯🇵", "jobs": ["दक्ष कामदार", "कृषि", "हेरचाह सेवा"] },
+          { "name": "मलेशिया",       "flag": "🇲🇾", "jobs": ["उत्पादन", "निर्माण", "बगान"] },
+          { "name": "दक्षिण कोरिया", "flag": "🇰🇷", "jobs": ["ईपीएस कार्यक्रम", "उत्पादन", "कृषि"] },
+          { "name": "हङकङ",          "flag": "🇭🇰", "jobs": ["घरेलु सेवा", "आतिथ्य", "खुद्रा"] }
+        ]
+      }
+    ]
+  }
+}
