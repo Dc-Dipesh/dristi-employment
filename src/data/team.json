@@ -1,50 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Rajesh Kumar Shrestha",
-    "role": "Managing Director",
-    "bio": "20+ years in international recruitment. Former DoFE board member with deep expertise in Gulf and East Asia placements.",
-    "initials": "RK",
+    "name": "Nirmal Chaulagain",
+    "role": "Chairman",
+    "bio": "Leads the company's vision and strategic direction, building trusted partnerships with employers and institutions at home and abroad.",
+    "initials": "NC",
     "color": "bg-navy"
   },
   {
     "id": 2,
-    "name": "Sunita Tamang",
-    "role": "Head of Operations",
-    "bio": "Oversees end-to-end recruitment processes and maintains employer relationships across 15+ countries.",
-    "initials": "ST",
+    "name": "Yadav Gaire",
+    "role": "CEO",
+    "bio": "Drives day-to-day leadership and growth, ensuring ethical recruitment practices and quality placements for every candidate.",
+    "initials": "YG",
     "color": "bg-gold"
   },
   {
     "id": 3,
-    "name": "Bikash Rai",
-    "role": "Visa Processing Manager",
-    "bio": "Specialist in work visa documentation and embassy coordination for Gulf, European, and East Asian countries.",
-    "initials": "BR",
+    "name": "Narayan Basnet",
+    "role": "MD",
+    "bio": "Oversees end-to-end recruitment operations — from candidate selection and interviews to deployment and employer coordination.",
+    "initials": "NB",
     "color": "bg-navy"
   },
   {
     "id": 4,
-    "name": "Priya Adhikari",
-    "role": "Candidate Relations Officer",
-    "bio": "Guides candidates through every step — from application and interview prep to pre-departure orientation.",
-    "initials": "PA",
+    "name": "Purnima Shrestha",
+    "role": "Documentation Officer",
+    "bio": "Manages visa processing, contracts, and government compliance paperwork, guiding candidates through every documentation step.",
+    "initials": "PS",
     "color": "bg-gold"
   },
   {
     "id": 5,
-    "name": "Anil Gurung",
-    "role": "Gulf Region Specialist",
-    "bio": "Expert in UAE, Qatar, Saudi, and Kuwait employer partnerships with 10+ years of placement experience.",
-    "initials": "AG",
+    "name": "Mohan Nepali",
+    "role": "Public Relation Officer",
+    "bio": "Handles communication with candidates, employers, and government agencies, and represents the company at public events and outreach programs.",
+    "initials": "MN",
     "color": "bg-navy"
-  },
-  {
-    "id": 6,
-    "name": "Manisha Karki",
-    "role": "Europe & East Asia Coordinator",
-    "bio": "Manages placements to Romania, Poland, Japan, and South Korea. Fluent in Japanese and Korean language basics.",
-    "initials": "MK",
-    "color": "bg-gold"
   }
 ]

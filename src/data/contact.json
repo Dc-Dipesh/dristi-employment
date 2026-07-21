@@ -1,15 +1,17 @@
 {
-  "phone": "+977-01-4XXXXXX",
-  "whatsapp": "+9779800000000",
+  "phone": "+977 9763947625",
+  "whatsapp": "9779763947625",
   "email": "info@dristiemployment.com.np",
+  "emailHr": "hr@dristiemployment.com.np",
   "address": {
-    "street": "New Baneshwor",
+    "street": "Tokha",
     "city_en": "Kathmandu",
     "city_ne": "काठमाडौं",
     "province_en": "Bagmati Province",
     "province_ne": "बागमती प्रदेश",
     "postal": "44600",
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4624444246447!2d85.33685!3d27.7031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b37a17ab3d%3A0x7f7b7d56e5b2b1c5!2sNew%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1234567890"
+    "mapLink": "https://maps.app.goo.gl/jx1uxTidX9sFe2TbA",
+    "mapEmbed": "https://maps.google.com/maps?q=27.735637,85.315926&z=16&output=embed"
   },
   "hours": {
     "weekdays": {
@@ -32,8 +34,7 @@
     "twitter":   "#"
   },
   "license": {
-    "dofe": "XXXXXXX/XXXX/XXX",
-    "iso":  "ISO 9001:2015"
+    "registration": "386096/82/83"
   },
   "countries": {
     "en": ["UAE", "Qatar", "Saudi Arabia", "Kuwait", "Romania", "Poland", "Croatia", "Japan", "Malaysia", "South Korea", "Other"],

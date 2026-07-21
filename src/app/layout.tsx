@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Dristi International Employment",
   },
   description:
-    "Nepal's trusted government-licensed foreign employment agency since 2014. Ethical, transparent recruitment to Gulf, Europe & East Asia. 5000+ workers placed across 15+ countries.",
+    "Nepal's trusted government-licensed foreign employment agency. Ethical, transparent recruitment to Gulf, Europe & East Asia. 5000+ workers placed across 15+ countries.",
   keywords: [
     "foreign employment Nepal",
     "Nepal recruitment agency",
@@ -97,13 +97,12 @@ const jsonLd = {
         height: 512,
       },
       description:
-        "Nepal's trusted government-licensed foreign employment recruitment agency since 2014. Ethical, transparent recruitment to Gulf, Europe & East Asia.",
-      foundingDate: "2014",
+        "Nepal's trusted government-licensed foreign employment recruitment agency. Ethical, transparent recruitment to Gulf, Europe & East Asia.",
       email: "info@dristiemployment.com.np",
-      telephone: "+977-01-4XXXXXX",
+      telephone: "+977-9763947625",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "New Baneshwor",
+        streetAddress: "Tokha",
         addressLocality: "Kathmandu",
         addressRegion: "Bagmati Province",
         postalCode: "44600",
@@ -130,16 +129,22 @@ const jsonLd = {
       name: "Dristi International Employment Pvt. Ltd.",
       image: `${SITE_URL}/logo.png`,
       url: SITE_URL,
-      telephone: "+977-01-4XXXXXX",
+      telephone: "+977-9763947625",
       email: "info@dristiemployment.com.np",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "New Baneshwor",
+        streetAddress: "Tokha",
         addressLocality: "Kathmandu",
         addressRegion: "Bagmati Province",
         postalCode: "44600",
         addressCountry: "NP",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 27.735637,
+        longitude: 85.315926,
+      },
+      hasMap: "https://maps.app.goo.gl/jx1uxTidX9sFe2TbA",
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",

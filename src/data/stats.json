@@ -1,14 +1,14 @@
 {
   "en": [
-    { "value": "10+",   "label": "Years Experience", "desc": "Trusted since 2014" },
+    { "value": "10+",   "label": "Years Experience", "desc": "In foreign employment" },
     { "value": "5000+", "label": "Placed Workers",   "desc": "Across the globe" },
     { "value": "15+",   "label": "Countries",        "desc": "Global network" },
-    { "value": "ISO",   "label": "Certified",        "desc": "Quality assured" }
+    { "value": "100%",  "label": "Govt. Registered", "desc": "Reg. No. 386096/82/83" }
   ],
   "ne": [
-    { "value": "१०+",    "label": "वर्षको अनुभव",      "desc": "२०१४ देखि विश्वसनीय" },
+    { "value": "१०+",    "label": "वर्षको अनुभव",      "desc": "वैदेशिक रोजगारमा" },
     { "value": "५०००+", "label": "विदेश पठाइएका",    "desc": "विश्वभर कामदारहरू" },
     { "value": "१५+",   "label": "देशहरू",            "desc": "विश्वव्यापी नेटवर्क" },
-    { "value": "ISO",   "label": "प्रमाणित",          "desc": "गुणस्तर सुनिश्चित" }
+    { "value": "१००%",  "label": "सरकारी दर्ता",       "desc": "दर्ता नं. 386096/82/83" }
   ]
 }

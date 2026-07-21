@@ -16,6 +16,15 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const text = [
+      `Hello! I'm ${form.name}.`,
+      `Phone: +977 ${form.phone}`,
+      `Interested country: ${form.country}`,
+      form.message ? `Message: ${form.message}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(`https://wa.me/${contactData.whatsapp}?text=${encodeURIComponent(text)}`, "_blank");
     setSubmitted(true);
   };
 
@@ -122,9 +131,18 @@ export default function Contact() {
               <h3 className="text-lg font-bold mb-5">{o.heading}</h3>
               <div className="space-y-4">
                 {[
-                  { icon: MapPin,  label: o.addressLabel, content: address },
-                  { icon: Phone,   label: o.phoneLabel,   content: contactData.phone,  href: `tel:${contactData.phone}` },
-                  { icon: Mail,    label: o.emailLabel,   content: contactData.email,  href: `mailto:${contactData.email}` },
+                  { icon: MapPin,  label: o.addressLabel, content: address, href: contactData.address.mapLink },
+                  { icon: Phone,   label: o.phoneLabel,   content: contactData.phone,  href: `tel:${contactData.phone.replace(/\s/g, "")}` },
+                  {
+                    icon: Mail,
+                    label: o.emailLabel,
+                    content: (
+                      <>
+                        <a href={`mailto:${contactData.email}`} className="block hover:text-white transition-colors">{contactData.email}</a>
+                        <a href={`mailto:${contactData.emailHr}`} className="block hover:text-white transition-colors">{contactData.emailHr}</a>
+                      </>
+                    ),
+                  },
                   { icon: Clock,   label: o.hoursLabel,   content: hours },
                 ].map(({ icon: Icon, label, content, href }) => (
                   <div key={label} className="flex items-start gap-3">
@@ -134,7 +152,11 @@ export default function Contact() {
                     <div>
                       <div className="font-medium text-sm mb-0.5">{label}</div>
                       {href ? (
-                        <a href={href} className="text-white/70 text-sm hover:text-white transition-colors whitespace-pre-line">{content}</a>
+                        <a
+                          href={href}
+                          {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                          className="text-white/70 text-sm hover:text-white transition-colors whitespace-pre-line"
+                        >{content}</a>
                       ) : (
                         <div className="text-white/70 text-sm whitespace-pre-line">{content}</div>
                       )}
