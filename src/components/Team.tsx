@@ -41,19 +41,6 @@ export default function Team() {
 
               {/* Bio */}
               <p className="text-gray-500 text-sm leading-relaxed flex-1">{bio}</p>
-
-              {/* LinkedIn placeholder */}
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-navy transition-colors"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
-                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" />
-                  </svg>
-                  LinkedIn
-                </a>
-              </div>
             </div>
           ))}
         </div>

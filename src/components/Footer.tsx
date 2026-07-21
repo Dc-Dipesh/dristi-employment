@@ -134,12 +134,8 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <div className="text-xs text-white/50 mb-1 uppercase tracking-wide">{ft.dofeLabel}</div>
-                <div className="text-white font-mono font-bold text-sm">{contactData.license.dofe}</div>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <div className="text-xs text-white/50 mb-1 uppercase tracking-wide">{ft.isoLabel}</div>
-                <div className="text-white font-semibold text-sm">{contactData.license.iso}</div>
+                <div className="text-xs text-white/50 mb-1 uppercase tracking-wide">{ft.registrationLabel}</div>
+                <div className="text-white font-mono font-bold text-sm">{contactData.license.registration}</div>
               </div>
               <div className="text-white/50 text-xs leading-relaxed">
                 {ft.registered}{" "}
@@ -153,14 +149,10 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/50 text-xs text-center sm:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-center">
+          <p className="text-white/50 text-xs text-center">
             {ft.copyright(new Date().getFullYear())}
           </p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-white/40 hover:text-white/70 text-xs transition-colors">{ft.privacy}</a>
-            <a href="#" className="text-white/40 hover:text-white/70 text-xs transition-colors">{ft.terms}</a>
-          </div>
         </div>
       </div>
     </footer>
